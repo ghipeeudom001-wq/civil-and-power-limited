@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Civils And Power Limited | Engineering & Construction</title>
+<meta name="description" content="Civils And Power Limited - Civil engineering, construction, power and infrastructure services in Nigeria.">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#07100d;color:#f4f4f4;line-height:1.6}
+a{text-decoration:none;color:inherit}
+button,input,textarea{font:inherit}
+:root{--gold:#d7a63b;--dark:#07100d;--card:#101b17;--muted:#aeb8b4;--line:#26332e}
+.container{width:min(1150px,92%);margin:auto}
+header{position:sticky;top:0;z-index:1000;background:rgba(7,16,13,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:20px;font-weight:900;color:var(--gold)}
+.logo span{display:block;color:#fff;font-size:10px;letter-spacing:2px}
+nav{display:flex;gap:24px}
+nav a{font-size:14px;color:#ddd}
+nav a:hover{color:var(--gold)}
+.menu{display:none;background:none;border:0;color:#fff;font-size:27px}
+.hero{min-height:650px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(4,10,8,.95),rgba(4,10,8,.55)),url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=85") center/cover}
+.hero h1{font-size:clamp(42px,7vw,78px);line-height:1.02;max-width:850px}
+.hero h1 span{color:var(--gold)}
+.hero p{max-width:650px;color:#d1d8d5;margin:25px 0;font-size:18px}
+.btn{display:inline-block;padding:14px 22px;border-radius:8px;background:var(--gold);color:#07100d;font-weight:800;border:0;cursor:pointer}
+.btn.alt{background:transparent;color:#fff;border:1px solid #65716c;margin-left:8px}
+section{padding:85px 0}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-size:38px}
+.section-title p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--card);border:1px solid var(--line);padding:28px;border-radius:15px}
+.card h3{margin-bottom:10px;color:var(--gold)}
+.card p{color:var(--muted)}
+.icon{font-size:35px;margin-bottom:12px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about img{width:100%;height:430px;object-fit:cover;border-radius:18px;border:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:-55px;position:relative}
+.stat{background:#101b17;border:1px solid var(--line);padding:25px;text-align:center;border-radius:12px}
+.stat strong{display:block;font-size:32px;color:var(--gold)}
+.project img{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:15px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.form input,.form textarea,.setting input{width:100%;padding:14px;background:#0b1511;color:#fff;border:1px solid var(--line);border-radius:8px;margin-bottom:12px}
+.form textarea{height:140px;resize:vertical}
+footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted)}
+.whatsapp{position:fixed;right:20px;bottom:20px;background:#20c76b;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:25px;z-index:900}
+.chat{position:fixed;right:20px;bottom:90px;width:350px;max-width:calc(100% - 40px);background:#101b17;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:none;z-index:950;box-shadow:0 20px 60px #000}
+.chatHead{background:#17251f;padding:15px;font-weight:bold;color:var(--gold);display:flex;justify-content:space-between}
+.chatBody{height:330px;overflow:auto;padding:15px}
+.msg{padding:10px 12px;border-radius:10px;margin-bottom:9px;max-width:85%;font-size:14px}
+.bot{background:#1b2923}
+.user{background:var(--gold);color:#07100d;margin-left:auto}
+.chatInput{display:flex;border-top:1px solid var(--line)}
+.chatInput input{flex:1;background:#0b1511;border:0;padding:13px;color:#fff}
+.chatInput button{background:var(--gold);border:0;padding:0 16px}
+.chatToggle{position:fixed;right:20px;bottom:90px;width:55px;height:55px;border-radius:50%;border:0;background:var(--gold);z-index:940;cursor:pointer}
+#admin{display:none;background:#050a08;min-height:100vh;padding:30px 0}
+.adminBox{background:#101b17;border:1px solid var(--line);border-radius:15px;padding:25px;margin-bottom:20px}
+.adminNav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.adminNav button{background:#18251f;color:#fff;border:1px solid var(--line);padding:10px 14px;border-radius:7px;cursor:pointer}
+.adminTab{display:none}.adminTab.active{display:block}
+table{width:100%;border-collapse:collapse}
+td,th{padding:10px;border-bottom:1px solid var(--line);text-align:left;font-size:13px}
+.adminGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.adminStat{background:#17251f;padding:20px;border-radius:10px}
+.adminStat b{font-size:28px;color:var(--gold);display:block}
+.setting{margin-bottom:20px}
+.setting label{display:block;color:#ccc;margin-bottom:6px}
+.previewImg{width:120px;height:80px;object-fit:cover;border-radius:7px}
+@media(max-width:750px){
+nav{display:none;position:absolute;top:72px;left:0;width:100%;background:#07100d;padding:20px;flex-direction:column}
+nav.open{display:flex}.menu{display:block}
+.grid,.about,.contact{grid-template-columns:1fr}.stats,.adminGrid{grid-template-columns:1fr 1fr}
+.hero{min-height:590px}.btn{margin-bottom:8px}.btn.alt{margin-left:0}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+<div class="logo" id="siteLogo">CIVILS AND POWER LIMITED<span>ENGINEERING • POWER • CONSTRUCTION</span></div>
+<nav id="nav"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a href="#admin">Admin</a></nav>
+<button class="menu" onclick="nav.classList.toggle('open')">☰</button>
+</div>
+</header>
+
+<main id="site">
+
+<section class="hero" id="home">
+<div class="container">
+<h1 id="heroTitle">Building <span>Infrastructure</span> That Powers Progress.</h1>
+<p id="heroText">Professional civil engineering, construction, power and infrastructure solutions delivered with precision, safety and technical expertise.</p>
+<a class="btn" id="heroWhatsApp" href="#" target="_blank">Talk To Us</a>
+<a class="btn alt" href="#services">Explore Services</a>
+</div>
+</section>
+
+<div class="container stats">
+<div class="stat"><strong>01</strong>Engineering</div>
+<div class="stat"><strong>02</strong>Construction</div>
+<div class="stat"><strong>03</strong>Power</div>
+<div class="stat"><strong>04</strong>Infrastructure</div>
+</div>
+
+<section id="about">
+<div class="container about">
+<img id="aboutImage" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=85">
+<div>
+<div class="section-title" style="text-align:left;margin-bottom:20px"><h2 id="aboutTitle">Engineering With Purpose</h2></div>
+<p id="aboutText">Civils And Power Limited provides construction, civil engineering, power and infrastructure solutions for clients who demand dependable execution and professional service.</p>
+<br>
+<a class="btn" href="#contact">Request Consultation</a>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<div class="section-title"><h2>Our Services</h2><p>Technical solutions for modern infrastructure.</p></div>
+<div class="grid" id="servicesGrid"></div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+<div class="section-title"><h2>Projects & Capabilities</h2><p>Selected work and capabilities.</p></div>
+<div class="grid" id="projectsGrid"></div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-title"><h2>Why Work With Us?</h2></div>
+<div class="grid">
+<div class="card"><div class="icon">🏗️</div><h3>Professional Execution</h3><p>Structured project delivery with attention to quality and technical requirements.</p></div>
+<div class="card"><div class="icon">⚡</div><h3>Power Expertise</h3><p>Infrastructure solutions designed around reliability and practical project requirements.</p></div>
+<div class="card"><div class="icon">🛡️</div><h3>Safety Focus</h3><p>Safety-conscious planning and execution across project activities.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container contact">
+<div>
+<div class="section-title" style="text-align:left"><h2>Start A Project</h2><p>Tell us what you need.</p></div>
+<p id="contactInfo">Phone/WhatsApp: Not yet added<br>Location: Uyo, Akwa Ibom, Nigeria</p>
+<br>
+<a id="contactWhatsApp" class="btn" href="#" target="_blank">WhatsApp Us</a>
+</div>
+<form class="form" onsubmit="sendLead(event)">
+<input id="leadName" placeholder="Your name" required>
+<input id="leadPhone" placeholder="Phone number" required>
+<input id="leadEmail" type="email" placeholder="Email">
+<textarea id="leadMessage" placeholder="Tell us about your project" required></textarea>
+<button class="btn">Send Enquiry</button>
+</form>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container">© <span id="year"></span> Civils And Power Limited. All rights reserved.</div>
+</footer>
+
+<button class="chatToggle" onclick="toggleChat()">💬</button>
+
+<div class="chat" id="chat">
+<div class="chatHead">Civils And Power Assistant <button onclick="toggleChat()">×</button></div>
+<div class="chatBody" id="chatBody">
+<div class="msg bot">Hello! I'm the Civils And Power virtual assistant. I can help with our services, projects, consultations, contact information and general enquiries. What would you like to know?</div>
+</div>
+<div class="chatInput"><input id="chatInput" placeholder="Type your question..." onkeydown="if(event.key==='Enter')sendChat()"><button onclick="sendChat()">➤</button></div>
+</div>
+
+<section id="admin">
+<div class="container">
+<div id="loginBox" class="adminBox">
+<h2>Owner Admin</h2><br>
+<input id="adminPassword" class="setting" type="password" placeholder="Admin password" style="padding:14px;width:100%;background:#0b1511;color:white;border:1px solid var(--line)">
+<br><br><button class="btn" onclick="adminLogin()">Login</button>
+</div>
+
+<div id="dashboard" style="display:none">
+<h1>Admin Dashboard</h1><br>
+<div class="adminNav">
+<button onclick="tab('overview')">Overview</button>
+<button onclick="tab('media')">Images & Logo</button>
+<button onclick="tab('projectsAdmin')">Projects</button>
+<button onclick="tab('leads')">Leads</button>
+<button onclick="tab('chats')">Chatbot</button>
+<button onclick="tab('content')">Website Content</button>
+<button onclick="tab('settings')">Contact Settings</button>
+</div>
+
+<div id="overview" class="adminTab active adminBox">
+<div class="adminGrid">
+<div class="adminStat"><b id="sVisits">0</b>Visitors</div>
+<div class="adminStat"><b id="sLeads">0</b>Leads</div>
+<div class="adminStat"><b id="sChats">0</b>Chats</div>
+<div class="adminStat"><b id="sMedia">0</b>Images</div>
+</div>
+</div>
+
+<div id="media" class="adminTab adminBox">
+<h2>Images & Logo</h2><br>
+<label>Upload Logo</label><input type="file" id="logoFile" accept="image/*"><button class="btn" onclick="uploadMedia('logo')">Upload Logo</button>
+<br><br>
+<label>Replace Hero Image</label><input type="file" id="heroFile" accept="image/*"><button class="btn" onclick="uploadMedia('hero')">Replace Hero</button>
+<br><br>
+<label>Replace About Image</label><input type="file" id="aboutFile" accept="image/*"><button class="btn" onclick="uploadMedia('about')">Replace About</button>
+<br><br>
+<label>Add More Images</label><input type="file" id="moreFiles" accept="image/*" multiple><button class="btn" onclick="uploadMultiple()">Add Images</button>
+<br><br>
+<div id="mediaList"></div>
+</div>
+
+<div id="projectsAdmin" class="adminTab adminBox">
+<h2>Add Project</h2><br>
+<input id="projectTitle" class="setting" placeholder="Project title">
+<input id="projectDesc" class="setting" placeholder="Project description">
+<input id="projectFile" type="file" accept="image/*">
+<button class="btn" onclick="addProject()">Add Project</button>
+<hr style="margin:25px 0;border-color:var(--line)">
+<div id="projectAdminList"></div>
+</div>
+
+<div id="leads" class="adminTab adminBox">
+<h2>Customer Leads</h2><br><div id="leadList"></div>
+</div>
+
+<div id="chats" class="adminTab adminBox">
+<h2>Chatbot Conversations</h2><br><div id="chatList"></div>
+</div>
+
+<div id="content" class="adminTab adminBox">
+<h2>Edit Website</h2><br>
+<input id="editHeroTitle" class="setting" placeholder="Hero title">
+<textarea id="editHeroText" class="setting" placeholder="Hero text" style="width:100%;height:100px;background:#0b1511;color:#fff;padding:12px"></textarea>
+<input id="editAboutTitle" class="setting" placeholder="About title">
+<textarea id="editAboutText" class="setting" placeholder="About text" style="width:100%;height:130px;background:#0b1511;color:#fff;padding:12px"></textarea>
+<button class="btn" onclick="saveContent()">Save Website Content</button>
+</div>
+
+<div id="settings" class="adminTab adminBox">
+<h2>Contact Settings</h2>
+<p style="color:#aaa">Civils And Power does not currently have a number here. Add it whenever you receive it.</p><br>
+<label>Business Phone</label>
+<input id="businessPhone" class="setting" placeholder="e.g. 08012345678">
+<label>WhatsApp Number</label>
+<input id="businessWhatsApp" class="setting" placeholder="e.g. 08012345678">
+<label>Business Email</label>
+<input id="businessEmail" class="setting" placeholder="Email address">
+<label>Location</label>
+<input id="businessLocation" class="setting" value="Uyo, Akwa Ibom, Nigeria">
+<button class="btn" onclick="saveSettings()">Save Contact Settings</button>
+</div>
+
+</div>
+</div>
+</section>
+
+<script>
+const GOOGLE_SCRIPT_URL="https://script.google.com/macros/s/AKfycbyc54a5xZ-cTVpkAV_G2rTMPQPbCbrVnJ3Ufj5yanuLxwi288417Qo1ls67MR29u7eP/exec";
+const DEFAULT_PASSWORD="CIVILS POWER 2026";
+let DATA={website:{},media:[],projects:[],stats:{},leads:[],chats:[]};
+
+const fallbackServices=[
+["🏗️","Civil Engineering","Civil works, structural projects and infrastructure development."],
+["🏢","Building Construction","Professional building construction and project execution."],
+["⚡","Power Solutions","Power infrastructure and electrical project support."],
+["🛣️","Infrastructure","Road, drainage and related infrastructure solutions."],
+["📐","Project Management","Planning, coordination and project supervision."],
+["🔧","Engineering Support","Technical solutions tailored to project requirements."]
+];
+
+function wa(n){return n?`https://wa.me/${n.replace(/\D/g,"").replace(/^0/,"234")}`:"#"}
+async function apiPost(data){
+if(GOOGLE_SCRIPT_URL.includes("PASTE_")) return {ok:false};
+try{return await fetch(GOOGLE_SCRIPT_URL,{method:"POST",body:JSON.stringify(data)}).then(r=>r.json())}catch(e){return {ok:false}}
+}
+async function apiGet(action){
+if(GOOGLE_SCRIPT_URL.includes("PASTE_"))return {};
+try{return await fetch(GOOGLE_SCRIPT_URL+"?action="+encodeURIComponent(action)).then(r=>r.json())}catch(e){return {}}
+}
+async function load(){
+let w=await apiGet("getWebsite"),m=await apiGet("getMedia"),p=await apiGet("getProjects"),s=await apiGet("getStats");
+if(w&&w.website)DATA.website=w.website;
+if(m&&m.media)DATA.media=m.media;
+if(p&&p.projects)DATA.projects=p.projects;
+if(s&&s.stats)DATA.stats=s.stats;
+render();
+apiPost({action:"trackVisit"});
+}
+function render(){
+let w=DATA.website||{};
+heroTitle.innerHTML=w.heroTitle||"Building <span>Infrastructure</span> That Powers Progress.";
+heroText.textContent=w.heroText||"Professional civil engineering, construction, power and infrastructure solutions delivered with precision, safety and technical expertise.";
+aboutTitle.textContent=w.aboutTitle||"Engineering With Purpose";
+aboutText.textContent=w.aboutText||"Civils And Power Limited provides construction, civil engineering, power and infrastructure solutions for clients who demand dependable execution and professional service.";
+let phone=w.phone||"";
+heroWhatsApp.href=wa(w.whatsapp||phone);
+contactWhatsApp.href=wa(w.whatsapp||phone);
+contactInfo.innerHTML=`Phone/WhatsApp: ${phone||"Not yet added"}<br>Location: ${w.location||"Uyo, Akwa Ibom, Nigeria"}`;
+servicesGrid.innerHTML=fallbackServices.map(x=>`<div class="card"><div class="icon">${x[0]}</div><h3>${x[1]}</h3><p>${x[2]}</p></div>`).join("");
+projectsGrid.innerHTML=DATA.projects.length?DATA.projects.map(p=>`<div class="card project"><img src="${p.image||'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80'}"><h3>${p.title}</h3><p>${p.description||""}</p></div>`).join(""):"<div class='card'><h3>Project Portfolio</h3><p>Project information can be added from the owner dashboard.</p></div>";
+let hero=DATA.media.find(x=>x.type==="hero"),about=DATA.media.find(x=>x.type==="about");
+if(hero)document.querySelector(".hero").style.backgroundImage=`linear-gradient(90deg,rgba(4,10,8,.95),rgba(4,10,8,.55)),url("${hero.url}")`;
+if(about)aboutImage.src=about.url;
+let logo=DATA.media.find(x=>x.type==="logo");
+if(logo)siteLogo.innerHTML=`<img src="${logo.url}" style="height:42px;max-width:190px;object-fit:contain"><span>ENGINEERING • POWER • CONSTRUCTION</span>`;
+year.textContent=new Date().getFullYear();
+}
+function toggleChat(){chat.style.display=chat.style.display==="block"?"none":"block"}
+async function sendChat(){
+let q=chatInput.value.trim();if(!q)return;
+addMsg(q,"user");chatInput.value="";
+let l=q.toLowerCase(),a="I can help with Civils And Power Limited's services, projects, consultations and contact information. What specific information do you need?";
+if(l.includes("service"))a="Our services include civil engineering, building construction, power solutions, infrastructure, project management and engineering support.";
+else if(l.includes("project"))a="You can ask about our projects or capabilities. The owner can also add the latest projects through the admin dashboard.";
+else if(l.includes("contact")||l.includes("phone")||l.includes("number")||l.includes("whatsapp"))a=DATA.website.phone?`You can contact us on ${DATA.website.phone}.`:"The business phone number has not been added yet. The owner can add it through the admin Contact Settings.";
+else if(l.includes("location")||l.includes("where"))a="We are based in Uyo, Akwa Ibom, Nigeria.";
+else if(l.includes("quote")||l.includes("price")||l.includes("cost"))a="For project pricing, please describe your project and the team can review your enquiry.";
+setTimeout(()=>addMsg(a,"bot"),250);
+apiPost({action:"saveChat",visitor:q,bot:a});
+}
+function addMsg(t,c){chatBody.innerHTML+=`<div class="msg ${c}">${t}</div>`;chatBody.scrollTop=chatBody.scrollHeight}
+async function sendLead(e){
+e.preventDefault();
+let d={action:"saveLead",name:leadName.value,phone:leadPhone.value,email:leadEmail.value,message:leadMessage.value};
+await apiPost(d);alert("Your enquiry has been received.");e.target.reset();
+}
+async function adminLogin(){
+let r=await apiPost({action:"login",password:adminPassword.value});
+if(r.ok||adminPassword.value===DEFAULT_PASSWORD){loginBox.style.display="none";dashboard.style.display="block";loadAdmin()}
+else alert("Incorrect password.");
+}
+function tab(id){document.querySelectorAll(".adminTab").forEach(x=>x.classList.remove("active"));document.getElementById(id).classList.add("active")}
+async function loadAdmin(){
+let d=await apiPost({action:"getAdminData",password:adminPassword.value});
+if(d.ok){DATA=d;renderAdmin()}
+}
+function renderAdmin(){
+sVisits.textContent=DATA.stats?.visits||0;sLeads.textContent=DATA.stats?.leads||0;sChats.textContent=DATA.stats?.chats||0;sMedia.textContent=DATA.media?.length||0;
+leadList.innerHTML=(DATA.leads||[]).map(x=>`<p><b>${x.name}</b> — ${x.phone}<br>${x.message}</p><hr>`).join("")||"No leads yet.";
+chatList.innerHTML=(DATA.chats||[]).map(x=>`<div class="card"><b>Visitor:</b> ${x.visitor}<br><b>Bot:</b> ${x.bot}</div><br>`).join("")||"No conversations yet.";
+projectAdminList.innerHTML=(DATA.projects||[]).map(x=>`<div class="card"><b>${x.title}</b><br>${x.description}</div><br>`).join("");
+mediaList.innerHTML=(DATA.media||[]).map(x=>`<div class="card"><img class="previewImg" src="${x.url}"><br><b>${x.type}</b><br><button class="btn" onclick="deleteMedia('${x.id}')">Delete</button></div><br>`).join("");
+businessPhone.value=DATA.website?.phone||"";businessWhatsApp.value=DATA.website?.whatsapp||"";businessEmail.value=DATA.website?.email||"";businessLocation.value=DATA.website?.location||"Uyo, Akwa Ibom, Nigeria";
+editHeroTitle.value=DATA.website?.heroTitle||"";editHeroText.value=DATA.website?.heroText||"";editAboutTitle.value=DATA.website?.aboutTitle||"";editAboutText.value=DATA.website?.aboutText||"";
+}
+function fileData(file){return new Promise((res,rej)=>{let r=new FileReader();r.onload=()=>res(r.result);r.onerror=rej;r.readAsDataURL(file)})}
+async function uploadMedia(type){
+let f={logo:logoFile,hero:heroFile,about:aboutFile}[type].files[0];if(!f)return alert("Choose an image first.");
+let b=await fileData(f);await apiPost({action:"uploadImage",password:adminPassword.value,type,data:b,name:f.name});await loadAdmin();await load();
+}
+async function uploadMultiple(){
+let fs=[...moreFiles.files];for(let f of fs)await apiPost({action:"uploadImage",password:adminPassword.value,type:"gallery",data:await fileData(f),name:f.name});await loadAdmin();await load();
+}
+async function deleteMedia(id){if(confirm("Delete this image?")){await apiPost({action:"deleteImage",password:adminPassword.value,id});await loadAdmin();await load()}}
+async function addProject(){
+let f=projectFile.files[0],img=f?await fileData(f):"";
+await apiPost({action:"saveProject",password:adminPassword.value,title:projectTitle.value,description:projectDesc.value,imageData:img,name:f?.name||""});
+projectTitle.value="";projectDesc.value="";projectFile.value="";await loadAdmin();await load();
+}
+async function saveContent(){
+await apiPost({action:"saveContent",password:adminPassword.value,heroTitle:editHeroTitle.value,heroText:editHeroText.value,aboutTitle:editAboutTitle.value,aboutText:editAboutText.value});
+await loadAdmin();await load();alert("Website updated.");
+}
+async function saveSettings(){
+await apiPost({action:"saveContent",password:adminPassword.value,phone:businessPhone.value,whatsapp:businessWhatsApp.value,email:businessEmail.value,location:businessLocation.value});
+await loadAdmin();await load();alert("Contact settings saved.");
+}
+if(location.hash==="#admin"){site.style.display="none";document.getElementById("admin").style.display="block"}
+window.addEventListener("hashchange",()=>{if(location.hash==="#admin"){site.style.display="none";document.getElementById("admin").style.display="block"}});
+load();
+</script>
+</body>
+</html>
